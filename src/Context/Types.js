@@ -1,0 +1,4 @@
+export const GET_CATEGORY = 'GET_CATEGORY'
+export const GET_ALLPRODUCTS = 'GET_ALLPRODUCTS'
+export const ADD_TOCARD = 'ADD_TOCARD'
+export const DELETE_TOCARD = 'DELETE_TOCARD'

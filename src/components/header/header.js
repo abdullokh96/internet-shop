@@ -4,13 +4,14 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
-
-function Navbarr() {
-    return (
+function Header() {
+  return (
+    <div>
         <Navbar bg="light" expand="lg">
-          <Container fluid>
-            <Navbar.Brand href="#">Internet Shop</Navbar.Brand>
+          <Container>
+            <Navbar.Brand>Internet Shop</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
@@ -18,8 +19,8 @@ function Navbarr() {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Cart</Nav.Link>
+                <Nav.Link><Link className='link' to = '/'>Home</Link></Nav.Link>
+                <Nav.Link><Link className='link' to = '/cart'>Cart</Link></Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -33,7 +34,8 @@ function Navbarr() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      );
+    </div>
+  )
 }
 
-export default Navbarr
+export default Header
